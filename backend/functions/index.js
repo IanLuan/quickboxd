@@ -22,6 +22,7 @@ const getStats = (data) => {
 }
 
 exports.quick = functions.https.onRequest(async (fnReq, fnRes) => {
+  fnRes.set('Access-Control-Allow-Origin', '*');
   const movieId = fnReq.query.id;
 
   if(movieId) {
