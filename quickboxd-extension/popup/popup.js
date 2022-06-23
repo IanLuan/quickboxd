@@ -1,12 +1,9 @@
-const netflixApi = "https://www.netflix.com/nq/website/memberapi/v2341bd5f/metadata?movieid=80242342";
-const tmdbApi = "https://api.themoviedb.org/3/search/movie?api_key=64b672e1e4c287afd09c22b468cdba0f&query=";
-
-window.onload = async () => {
-  const netflixResponse = await (await fetch(netflixApi)).json();
-  const title = netflixResponse.video.title;
-
-  const tmdbResponse = await (await fetch(tmdbApi + title)).json();
-  const movieId = tmdbResponse.results[0].id;
-  
-  document.querySelector("#teste_pop").innerHTML = "yes";
+window.onload = () => {
+  chrome.storage.sync.get("quickboxd", function(data) {
+    alert(data.quickboxd.rating)
+  });
+  // document.querySelector("#quick_rating").innerHTML = movieData.rating;
+  // document.querySelector("#quick_watches").innerHTML = movieData.stats.watches;
+  // document.querySelector("#quick_lists").innerHTML = movieData.stats.lists;
+  // document.querySelector("#quick_likes").innerHTML = movieData.stats.likes;
 }
