@@ -1,9 +1,11 @@
 window.onload = () => {
   chrome.storage.sync.get("quickboxd", function(data) {
-    alert(data.quickboxd.rating)
+    const lbxd = data.quickboxd.lbxd;
+    document.querySelector(".movie-title").innerHTML = data.quickboxd.title;
+    document.querySelector(".movie-poster img").src = lbxd.image;
+    document.querySelector(".quick-rating__value").innerHTML = lbxd.rating;
+    document.querySelector(".quick-stats.watches span").innerHTML = lbxd.stats.watches;
+    document.querySelector(".quick-stats.lists span").innerHTML = lbxd.stats.lists;
+    document.querySelector(".quick-stats.likes span").innerHTML = lbxd.stats.likes;
   });
-  // document.querySelector("#quick_rating").innerHTML = movieData.rating;
-  // document.querySelector("#quick_watches").innerHTML = movieData.stats.watches;
-  // document.querySelector("#quick_lists").innerHTML = movieData.stats.lists;
-  // document.querySelector("#quick_likes").innerHTML = movieData.stats.likes;
 }

@@ -15,7 +15,11 @@ const injectQuickboxd = async () => {
     if (tmdbResponse.total_results > 0) {
       movieData = await (await fetch(quickApi + "?id=" + tmdbResponse.results[0].id)).json();
       
-      chrome.storage.sync.set({'quickboxd': movieData}, function() {
+      chrome.storage.sync.set({
+        'quickboxd': {
+          title: netflixResponse.video.title,
+          lbxd: movieData,
+      }}, function() {
         console.log('Quickboxd is done!');
       });
     }

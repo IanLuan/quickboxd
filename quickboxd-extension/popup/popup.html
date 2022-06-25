@@ -4,12 +4,35 @@
     <link rel="stylesheet" href="popup.css">
   </head>
   <body>
-    <h1>Quickboxd</h1>
+    <div class="flex gap">
+      <div class="movie-poster">
+        <img src="" />
+      </div>
+      
+      <div class="flex-column flex-grow">
+        <h1 class="movie-title">Arremessando alto</h1>
 
-    <div id="quick_rating"></div>
-    <div id="quick_watches"></div>
-    <div id="quick_lists"></div>
-    <div id="quick_likes"></div>
+        <div class="quick-rating">
+          <span class="quick-rating__value">...</span>
+          <div class="quick-rating__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        
+        <div class="flex quick-stats-wrapper">
+          <div class="quick-stats watches">
+            <img src="./assets/eye-fill.svg">
+            <span>...</span>
+          </div>
+          <div class="quick-stats lists">
+            <img src="./assets/grid-fill.svg">
+            <span>...</span>
+          </div>
+          <div class="quick-stats likes">
+            <img src="./assets/heart-fill.svg">
+            <span>...</span>
+          </div>
+        </div>
+      </div>
+    </div>    
     
     <script src="popup.js"></script>
   </body>
