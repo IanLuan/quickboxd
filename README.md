@@ -3,8 +3,11 @@
 
 ⭐️ You can see the rating and stats of a movie without leaving it.
 
-### supported services:
+### Supported services:
 - Netlix ✅
 - Prime Video
 - Disney+
 - Globoplay
+
+### Screenshot from Netflix:
+![Screenshot](https://i.imgur.com/WaSIRpZ.jpg)
